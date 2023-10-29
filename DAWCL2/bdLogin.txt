@@ -1,4 +1,6 @@
-CREATE TABLE usuario (
+
+
+create table usuario (
 	idusuario INT auto_increment NOT NULL,
 	nomusuario varchar(100) NULL,
 	email varchar(200) NULL,
@@ -10,14 +12,14 @@ CREATE TABLE usuario (
 );
 
 
-CREATE TABLE rol (
+create table rol (
 	idrol INT auto_increment NOT NULL,
 	nomrol varchar(300) NULL,
 	CONSTRAINT roles_pk PRIMARY KEY (idrol)
 );
 
 
-CREATE TABLE usuario_rol (
+create table usuario_rol (
 	idusuario INT NOT NULL,
 	idrol INT NOT NULL,
 	CONSTRAINT user_role_pk PRIMARY KEY (idusuario, idrol),
